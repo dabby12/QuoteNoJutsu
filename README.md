@@ -1,37 +1,131 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# QuoteNoJutsu
+
+**QuoteNoJutsu** is a simple and stylish anime quote generator built with **Next.js 13+ App Router**, **Tailwind CSS**, and a serverless API route. It displays a random anime quote from a curated external API and offers a cute, pastel-themed UI.
+
+---
+
+## Features
+
+- Random anime quote fetched via an API proxy  
+- Responsive and elegant UI built with Tailwind CSS  
+- Custom font and soft color palette for an anime-inspired aesthetic  
+- Button to fetch a new quote without reloading  
+- Built with modern web technologies (Next.js, React Hooks, ES Modules)
+
+---
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+# Clone the repo
+git clone https://github.com/dabby12/QuoteNoJutsu.git
+cd QuoteNoJutsu
+
+# Install dependencies
+npm install
+
+# Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+````
+
+Then open `http://localhost:3000` in your browser.
+
+---
+
+## Project Structure
+
+```
+/app
+  ├── api
+  │     └── quote
+  │         └── route.ts       # Internal API route fetching from external API
+  └── page.tsx                 # Main UI component (Client Component)
+tailwind.config.js            # Tailwind CSS configuration
+package.json                  # Project metadata and scripts
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Styling and UI
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+* Theme: Pastel tones, rounded corners, soft shadows
+* Typography: Uses `M PLUS Rounded 1c` for a modern, anime-inspired look
+* Fully responsive layout
+* Designed to feel light, cute, and minimal
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## API Integration
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+`/api/quote` proxies a request to:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+https://yurippe.vercel.app/api/quotes?random=1
+```
 
-## Deploy on Vercel
+It returns a JSON object like:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```json
+{
+  "quote": "People’s lives don’t end when they die. It ends when they lose faith.",
+  "character": "Itachi Uchiha",
+  "show": "Naruto"
+}
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# QuoteNoJutsu
+This setup avoids CORS issues and simplifies client-side fetch logic.
+
+---
+
+## Pull Requests
+
+Contributions are welcome! If you'd like to fix a bug, improve styling, or add new features:
+
+1. Fork the repository
+2. Create a new branch:
+
+   ```bash
+   git checkout -b feature-name
+   ```
+3. Make your changes and commit:
+
+   ```bash
+   git commit -m "Add feature"
+   ```
+4. Push to your fork:
+
+   ```bash
+   git push origin feature-name
+   ```
+5. Open a pull request to `main` with a clear description.
+
+Please follow the existing code style and keep pull requests focused and concise.
+
+---
+
+## Potential Improvements
+
+| Feature         | Description                                              |
+| --------------- | -------------------------------------------------------- |
+| Text animation  | Animate quote appearance using Anime.js or Framer Motion |
+| Dark mode       | Toggle between light and dark pastel themes              |
+| Sakura overlay  | Add visual effects like falling petals                   |
+| Shareable image | Export the quote as a downloadable image                 |
+| Social sharing  | Twitter/X or Threads integration                         |
+| Local history   | View previously fetched quotes                           |
+
+---
+
+## Motivation
+
+This project is ideal for:
+
+* Practicing with the Next.js 13 App Router
+* Building a lightweight full-stack app using serverless functions
+* Adding a themed project to a portfolio or a submission for events like Hack Club Shells
+
+---
+
+## License
+
+MIT License — feel free to reuse or modify for your own anime-themed tools, utilities, or learning purposes
