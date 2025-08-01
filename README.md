@@ -22,10 +22,10 @@ git clone https://github.com/dabby12/QuoteNoJutsu.git
 cd QuoteNoJutsu
 
 # Install dependencies
-npm install
+pnpm install
 
 # Run the development server
-npm run dev
+pnpm run dev
 ````
 
 Then open `http://localhost:3000` in your browser.
@@ -34,7 +34,7 @@ Then open `http://localhost:3000` in your browser.
 
 ## Project Structure
 
-```
+```bash
 /app
   ├── api
   │     └── quote
@@ -48,10 +48,10 @@ package.json                  # Project metadata and scripts
 
 ## Styling and UI
 
-* Theme: Pastel tones, rounded corners, soft shadows
-* Typography: Uses `M PLUS Rounded 1c` for a modern, anime-inspired look
-* Fully responsive layout
-* Designed to feel light, cute, and minimal
+- Theme: Pastel tones, rounded corners, soft shadows
+- Typography: Uses `M PLUS Rounded 1c` for a modern, anime-inspired look
+- Fully responsive layout
+- Designed to feel light, cute, and minimal
 
 ---
 
@@ -59,7 +59,7 @@ package.json                  # Project metadata and scripts
 
 `/api/quote` proxies a request to:
 
-```
+```bash
 https://yurippe.vercel.app/api/quotes?random=1
 ```
 
@@ -87,16 +87,19 @@ Contributions are welcome! If you'd like to fix a bug, improve styling, or add n
    ```bash
    git checkout -b feature-name
    ```
+
 3. Make your changes and commit:
 
    ```bash
    git commit -m "Add feature"
    ```
+
 4. Push to your fork:
 
    ```bash
    git push origin feature-name
    ```
+
 5. Open a pull request to `main` with a clear description.
 
 Please follow the existing code style and keep pull requests focused and concise.
@@ -120,9 +123,9 @@ Please follow the existing code style and keep pull requests focused and concise
 
 This project is ideal for:
 
-* Practicing with the Next.js 13 App Router
-* Building a lightweight full-stack app using serverless functions
-* Adding a themed project to a portfolio or a submission for events like Hack Club Shells
+- Practicing with the Next.js 13 App Router
+- Building a lightweight full-stack app using serverless functions
+- Adding a themed project to a portfolio or a submission for events like Hack Club Shells
 
 ---
 
